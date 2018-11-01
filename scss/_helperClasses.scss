@@ -1,0 +1,78 @@
+// Helper Classes
+// remove button styling around fontawesome nested in button
+.fa-button-reset {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+.edit-arrow-button {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+// bootstrap margin and padding for spacing
+// vertical
+.bs-padding-v {
+  @extend .py-3;
+}
+
+.bs-margin-v {
+  @extend .my-3;
+}
+
+// horizontal
+.bs-padding-h {
+  @extend .px-3;
+}
+
+.bs-margin-h {
+  @extend .mx-3;
+}
+
+// vertical and horizontal
+.bs-padding-vh {
+  @extend .p-3;
+}
+
+.bs-margin-vh {
+  @extend .m-3;
+}
+
+// right
+.bs-padding-r {
+  @extend .pr-3;
+}
+
+.bs-margin-r {
+  @extend .mr-3;
+}
+
+// left
+.bs-padding-l {
+  @extend .pl-3;
+}
+
+.bs-margin-l {
+  @extend .ml-3;
+}
+
+// bottom
+.bs-padding-b {
+  @extend .pb-3;
+}
+
+.bs-margin-b {
+  @extend .mb-3;
+}
+
+// top
+.bs-padding-t {
+  @extend .pt-3;
+}
+
+.bs-margin-t {
+  @extend .mt-3;
+}

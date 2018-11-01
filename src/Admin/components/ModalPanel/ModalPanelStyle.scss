@@ -1,0 +1,134 @@
+// .panel-test {
+//   padding: 50px;
+//   margin: 20px;
+//   background-color: lightblue;
+//   border: solid 1px $gray-500;
+// }
+
+// resetting added gradients set in style.sass on all modals
+.modal .modal-dialog:not(.advanced-search-modal) .modal-content::after {
+  content: none;
+}
+.modal .modal-dialog:not(.advanced-search-modal) .modal-content {
+  &::before {
+    display: none;
+  }
+  &::after {
+    display: none;
+  }
+}
+
+// // TODO: fix modal animation or build fully custom version
+.modal.show .modal-dialog {
+  float: right;
+}
+.modal .modal-dialog {
+  float: right;
+}
+
+.modal-panel {
+  height: 100vh;
+  // TODO: figure out width
+  // width: 43vw;
+  // TEMP: min-width
+  min-width: 40vw;
+  padding: 0;
+  margin: 0;
+
+  .modal-panel-header {
+    margin-top: 3vh;
+    @extend .bs-padding-vh;
+  }
+
+  .modal-content {
+    display: grid;
+    grid-template-rows: 53px auto auto 1fr 52px;
+    grid-template-columns: 100%;
+    height: 100vh;
+    border: none;
+
+    .modal-panel-nav {
+      display: flex;
+      align-items: center;
+      color: white;
+      background: #4A484E;
+
+      .h5 {
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+      }
+
+      a {
+        text-transform: capitalize;
+        color: white;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+      .nav {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .nav-link {
+        padding: 0;
+        margin: 0;
+      }
+      .nav-title-icon {
+        @extend .bs-margin-h;
+      }
+    }
+
+    .modal-panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .header-container {
+        display: flex;
+        flex: 1 1 auto;
+      }
+
+      .modal-panel-header-content {
+        display: flex;
+        flex: 1 1 auto;
+        // TODO: not sure on this
+        flex-wrap: nowrap;
+      }
+
+      .email {
+        padding-left: 5px;
+      }
+    }
+
+    .modal-panel-content-header {
+      margin: 0;
+      @extend .bs-padding-h;
+    }
+    .modal-panel-content-body {
+      overflow-y: scroll;
+      @extend .bs-padding-h;
+
+      label {
+        margin-bottom: 0;
+      }
+      .card {
+        @extend .bs-margin-v;
+      }
+    }
+
+    .modal-panel-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: black 1px solid;
+      @extend .bs-padding-vh;
+
+      .modal-panel-left-button,
+      .modal-panel-right-button {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+// TODO needs to be moved to header css
+.main-header-logo-container,
+.admin-link {
+  list-style: none;
+}
+
+.admin-header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  // background-color: $gray-700;
+  background-color: #1B252D;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  @extend .bs-padding-h;
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      align-content: center;
+      font-size: 25px;
+      color: white;
+    }
+
+    // svg {
+    //   height: 25px;
+    //   width: auto;
+    // }
+    // path, polygon, rect {
+    //   // fill: $gray-500;
+    //   // color: $gray-500;
+    //   fill: white;
+    //   color: white;
+    // }
+  }
+
+  .user-settings {
+    display: flex;
+    align-items: center;
+
+    .user-settings-icons {
+      svg,
+      span {
+        width: auto;
+        height: 17px;
+        @extend .bs-margin-r;
+        // color: $gray-500;
+        color: white;
+      }
+    }
+
+    .avatar-self {
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      font-size: 1.3rem;
+      line-height: 1.3rem;
+      border-radius: 50%;
+      color: $gray-600;
+      background-color: white;
+      border: none;
+
+      &:hover{
+        color: $gray-900;
+      }
+    }
+
+
+    .dropdown-menu {
+      left: auto;
+      right: 0;
+
+      .dropdown-item {
+        text-decoration: none;
+        list-style-type: none;
+        a {
+          color: black;
+        }
+      }
+      .icon-wrapper {
+        display: inline-block;
+        width: 14px;
+        height: auto;
+        text-align: center;
+        margin-right: 8px;
+        // height: auto;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // padding-right: 8px;
+      }
+    }
+
+  }
+}

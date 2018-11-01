@@ -1,0 +1,115 @@
+.admin-security-page {
+  .change-password-container {
+    @extend .bs-margin-b;
+  }
+
+  .password-container {
+    max-width: 600px;
+    @extend .bs-margin-b;
+    @extend .bs-margin-h;
+
+    .save-alert-container {
+      display: flex;
+
+      .alert-success {
+        display: flex;
+        align-items: center;
+        @extend .bs-padding-h;
+        @extend .bs-margin-l;
+      }
+      .alert-danger {
+        display: flex;
+        align-items: center;
+        @extend .bs-padding-h;
+        @extend .bs-margin-l;
+      }
+    }
+
+    // .new-password-container {
+    //   display: flex;
+    // }
+  }
+
+  .two-factor-container {
+    max-width: 600px;
+    // display: flex;
+
+    .two-factor-navigation {
+      @extend .bs-margin-r;
+    }
+
+    .two-factor-content {
+      max-width: 600px;
+      @extend .bs-margin-vh;
+    }
+
+    .step-container {
+      display: flex;
+      @extend .bs-margin-v;
+
+      .step-title {
+        @extend .h5;
+      }
+    }
+
+    .two-factor-title {
+      @extend .h4;
+    }
+
+    // TODO: setup square container to grow image to fit hight
+    .step-image-container {
+      width: 125px;
+      height: 125px;
+      @extend .bs-margin-r;
+    }
+
+    .step-image {
+      width: 125px;
+      height: auto;
+      font-size: 125px;
+    }
+    .step-image-container {
+      width: 125px;
+      height: 125px;
+      @extend .bs-margin-r;
+
+      svg {
+        width: 125px;
+        height: auto;
+        color: $gray-600;
+      }
+    }
+
+    .qrCode {
+      width: 100%;
+      height: auto;
+    }
+
+    .app-store-badge {
+      width: 100px;
+      height: auto;
+    }
+
+    .two-factor-content {
+      flex: 1 1 auto;
+    }
+
+    .app-code {
+      width: 6em;
+    }
+  }
+}
+.cant-scan-container {
+  background-color: white;
+  color: black;
+
+  ol li {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .manual-code {
+    margin: 8px;
+    // white-space: nowrap;
+  }
+}

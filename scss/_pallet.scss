@@ -1,0 +1,28 @@
+$white: #fff;
+$black: #000;
+$red: #ff0000;
+
+$offBlack: #101010;
+
+$redAlpha: rgba(255, 0, 0, .3);
+$redUltraLight: #ff8c7c;
+
+$mainGreen: #53a53a;
+$mainGreenAlpha: rgba(83,165,58,.3);
+$mainGreenDark: #398423;
+
+$mainBlue: #0087c7;
+$mainBlueAlpha: rgba(0, 135, 199, .3);
+$mainBlueDark: #0c6aa8;
+
+$mainGray: #d1d1d1;
+$mainGrayDark: #a8a7a7;
+$mainGrayDarker: darken(#a8a7a7, 15);
+
+$lightGray: lighten($mainGray, 15%);
+$mainGray2: #f1f1f1;
+$mainGray2Alpha: rgba(241, 241, 241, .8);
+$mainGray2Dark: #d4d4d4;
+$borderGray: #ccc;
+
+$btnWarningOutline: #f0ad4e;

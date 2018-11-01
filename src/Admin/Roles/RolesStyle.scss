@@ -1,0 +1,22 @@
+.admin-roles-page {
+  .project-container {
+    @extend .bs-margin-b;
+
+    .project-header {
+      border-top: 1px solid $gray-400;
+      border-left: 1px solid $gray-400;
+      border-right: 1px solid $gray-400;
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      padding: 8px;
+
+      .h5 {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}

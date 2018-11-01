@@ -1,0 +1,125 @@
+.admin-users-page {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  height: 100%;
+
+  // TODO: temp location
+  .ReactTable {
+    display: flex;
+    flex: 1 0 auto;
+  }
+  
+  .rt-table {
+    flex-shrink: 0;
+    height: 0px;
+  }
+  
+  .rt-tbody {
+    overflow-y: scroll;
+  }
+  
+  .reactTable-holder {
+    display: flex;
+    flex: 1 0 auto;
+    width: 100%;
+  }
+
+  .users-checkbox {
+    margin: 15px 0px;
+  }
+
+  .name,
+  .user-email {
+    padding: 10px 5px;
+  }
+
+  .pending {
+    vertical-align: middle;
+    // color: $btnWarningOutline;
+  }
+
+  .user-projects {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border: $mainGray 1px solid;
+  }
+
+  .profile-picture-container {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $gray-600;
+    border-radius: 50%;
+  }
+
+  .profile-picture-text {
+    display: inline-block;
+    font-size: 1.5rem;
+    color: $gray-200;
+  }
+
+  .pending-profile-picture {
+    width: 48px;
+    height: 48px;
+    background-color: $gray-400;
+    border-radius: 50%;
+  }
+
+  .profile-picture {
+    width: 48px;
+    height: auto;
+    // background-color: $gray-400;
+    background-color: $gray-700;
+    border-radius: 50%;
+  }
+
+  // TODO: fix to remove important
+  .rt-td.user-status-pending,
+  .rt-td.user-status-active,
+  .rt-td.user-status-revoke,
+  .rt-td.user-status-contract {
+    padding: 0 !important;
+  }
+
+  .user-status-hover-div {
+    content: '';
+    height: 100%;
+    width: 100%;
+  }
+
+  .user-status-tooltip-text {
+    text-transform: capitalize;
+  }
+
+  .user-status-pending {
+    padding: 0;
+    margin: 0;
+    // background-color: $gray-500;
+    background-color: $btnWarningOutline;
+  }
+
+  .user-status-active {
+    padding: 0;
+    margin: 0;
+    // background-color: $gray-700;
+    background-color: $mainGreen;
+  }
+
+  .user-status-revoke {
+    padding: 0;
+    margin: 0;
+    // background-color: $gray-900;
+    background-color: $redUltraLight;
+  }
+
+  .user-status-contract {
+    padding: 0;
+    margin: 0;
+    // background-color: $gray-300;
+    background-color: $mainBlueAlpha;
+  }
+}

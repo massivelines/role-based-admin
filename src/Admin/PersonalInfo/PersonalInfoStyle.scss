@@ -1,0 +1,135 @@
+// TEMP:
+.upload-file-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  label {
+    cursor: pointer;
+    /* Style as you please, it will become the visible UI component. */
+  }
+  .input-file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .input-file + label {
+    cursor: pointer; /* "hand" cursor */
+  }
+
+  .input-file:focus + label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+
+  // TODO: test touch event
+  .input-file + label * {
+    pointer-events: none;
+  }
+
+  .trash-button {
+    display: flex;
+    align-self: center;
+    color: black;
+  }
+}
+
+.admin-personal-info-page {
+  .personal-details-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .section-title {
+      width: 100%;
+    }
+
+    .upload-file-container{
+      width: 145px;
+      @extend .bs-padding-vh;
+
+      form {
+        display: flex;
+        justify-content: space-around
+      }
+
+      svg {
+        width: auto;
+        height: 20px;
+      }
+    }
+
+    .picture-container {
+      width: 145px;
+      height: 145px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $gray-600;
+      border-radius: 50%;
+      position: relative;
+
+      .picture {
+        width: 145px;
+        height: 145px;
+        border-radius: 50%;
+      }
+
+      .picture-text {
+        width: 145px;
+        height: 145px;
+        color: white;
+        font-size: 6em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .personal-input-container {
+      .form-group {
+        @extend .bs-margin-b;
+        @extend .bs-margin-l;
+
+        label {
+          display: block;
+        }
+        input {
+          width: 20em;
+        }
+      }
+      .save-alert-container {
+        display: flex;
+
+        .alert-success {
+          display: flex;
+          align-items: center;
+          @extend .bs-padding-h;
+          @extend .bs-margin-l;
+        }
+        .alert-danger {
+          display: flex;
+          align-items: center;
+          @extend .bs-padding-h;
+          @extend .bs-margin-l;
+        }
+      }
+    }
+  }
+
+  .assigned-projects-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 4px;
+
+    .assigned-project {
+      min-width: 250px;
+      width: 20%;
+      margin: 4px;
+    }
+  }
+}

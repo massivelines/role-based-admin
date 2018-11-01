@@ -1,0 +1,18 @@
+.add-user-header-container {
+  @extend .bs-margin-r;
+}
+
+.add-user-header-text {
+  width: 100%;
+}
+.add-user-input-container {
+  // @extend .bs-padding-h;
+
+  .add-user-email {
+    width: 100%;
+  }
+
+  .add-user-email-hint {
+    color: $gray-600;
+  }
+}

@@ -1,0 +1,60 @@
+@import './PersonalInfo/PersonalInfoStyle';
+@import './Security/Security';
+
+@import './Overview/OverviewStyle';
+
+@import './Roles/RolesStyle';
+@import './Roles/EditRole/EditRoleStyle';
+@import './Roles/AddRole/AddRoleStyle';
+
+@import './Users/UsersStyle';
+@import './Users/EditUser/EditUserStyle';
+@import './Users/AddUser/AddUserStyle';
+
+@import './Projects/ProjectsStyle';
+
+@import './components/ModalPanel/ModalPanelStyle';
+@import './components/CollapseList/CollapseListStyle';
+
+.content {
+  grid-area: content;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+
+  // TODO: broke Users page
+  .content-body {
+    flex: 1 0 auto;
+    height: 0px;
+    overflow: auto;
+    @extend .bs-padding-r;
+    @extend .bs-padding-v;
+  }
+
+  .content-header {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @extend .bs-margin-b;
+
+    .content-title {
+      width: 100%;
+      @extend h2;
+      padding: 0;
+      margin: 0;
+    }
+
+    .content-header-buttons {
+      display: flex;
+
+      & > *:nth-child(odd) {
+        @extend .bs-margin-r;
+      }
+    }
+  }
+  .section-title {
+    width: 100%;
+    @extend h3;
+  }
+}

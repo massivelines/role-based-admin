@@ -1,0 +1,106 @@
+// bootstrap 4 Override
+$enable-rounded: false;
+$enable-gradients: false;
+
+// bootstrap sass
+@import '~bootstrap/scss/bootstrap';
+
+// react-table
+@import '~react-table/react-table';
+
+// custom color pallet
+@import './helperClasses';
+@import './pallet';
+
+// components
+@import '../src/Header/HeaderStyle';
+@import '../src/Admin/AdminStyle';
+
+
+#root {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'header header'
+    'sidebar content';
+  grid-column-gap: $grid-gutter-width;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    color: $gray-500;
+    color: black;
+    background-color: white;
+    overflow: auto;
+    border-right: 1px solid $gray-200;
+
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    .sidebar-title {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-size: 1.25rem;
+      // border-bottom: solid 1px $gray-700;
+      @extend .bs-padding-h;
+    }
+
+    .section-nav {
+      // margin-bottom: 8px;
+      // border-bottom: solid 1px $gray-700;
+      // @extend .bs-padding-h;
+
+      .section-header {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 1.125rem;
+        font-weight: 200;
+        // border-bottom: solid 1px $gray-700;
+        @extend .bs-padding-h;
+      }
+      .section-links {
+        // padding-left: 16px;
+        // padding-right: 16px;
+        padding-bottom: 8px;
+        // @extend .bs-padding-h;
+
+        a {
+          display: block;
+          // color: $gray-500;
+          color: black;
+          border-left: solid transparent 5px;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          padding-left: 24px;
+          padding-right: 16px;
+          // @extend .bs-padding-h;
+
+          &:hover {
+            text-decoration: none;
+            // color: black;
+            // border-color: $gray-300;
+            // background-color: $gray-500;
+            color: black;
+            border-color: #1B252D;
+            background-color: $gray-100;
+          }
+
+          &.active {
+            // color: $gray-500;
+            // border-color: $gray-200;
+            // background-color: $gray-700;
+            color: black;
+            border-color: #b8261e;
+            background-color: $gray-200;
+          }
+        }
+      }
+    }
+  }

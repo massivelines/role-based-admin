@@ -1,0 +1,63 @@
+.admin-projects-page {
+  .row-archived {
+    color: $gray-600;
+  }
+
+}
+
+.edit-project {
+
+  .alias{
+    @extend .bs-margin-h;
+    color: $gray-600
+  }
+
+  .description {
+    @extend .bs-margin-h;
+  }
+
+  .project-user {
+    display: flex;
+    align-items: center;
+    @extend .bs-margin-vh;
+  
+    .profile-picture-container {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $gray-600;
+      border-radius: 50%;
+      @extend .bs-margin-r;
+    }
+  
+    .profile-picture-text {
+      display: inline-block;
+      font-size: 1.5rem;
+      color: $gray-200;
+    }
+  
+    .pending-profile-picture {
+      width: 48px;
+      height: 48px;
+      background-color: $gray-400;
+      border-radius: 50%;
+    }
+  
+    .profile-picture {
+      width: 48px;
+      height: auto;
+      // background-color: $gray-400;
+      background-color: $gray-700;
+      border-radius: 50%;
+    }
+  
+    .project-user-name {
+      width: 100%;
+      font-size: 1.25em;
+    }
+  }
+
+}
+

@@ -1,0 +1,21 @@
+.resource-row-header {
+  text-align: center;
+}
+
+.resource-row {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  border-bottom: $mainGray 1px solid;
+  padding: 5px 5px;
+
+  .resource-title {
+    display: flex;
+    align-items: center;
+  }
+
+  .rule-check-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
