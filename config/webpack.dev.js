@@ -1,6 +1,7 @@
 // Development Webpack Config
 
 const webpack = require('webpack');
+const path = require('path');
 const merge = require('webpack-merge');
 
 // plugin that runs typescript type checker on a separate process
@@ -8,8 +9,19 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const common = require('./webpack.common.js');
 
+const OUT_DIR = path.resolve(__dirname, '../dist');
+
 module.exports = merge(common, {
   mode: 'development',
+
+  // output: {
+    path: OUT_DIR,
+    filename: 'js/[name].js',
+    publicPath: '/',
+  //   // Temp fix: Issue with webpack 4, might not be fix until 5, workaround for hot reloading
+  //   // https://github.com/webpack/webpack/issues/6642
+  //   globalObject: 'this',
+  // },
 
 //   if comments needed change to 'source-map'
   devtool: 'cheap-module-eval-source-map',
@@ -59,6 +71,14 @@ module.exports = merge(common, {
         include: /node_modules/,
         type: 'javascript/auto',
       },
+
+      {
+          test: /\.(jpg|svg|ico|gif|png)$/,
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]',
+          },
+        },
     ],
   },
 

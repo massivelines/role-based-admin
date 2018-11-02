@@ -1,6 +1,7 @@
 // Production Webpack Config
 
 const webpack = require('webpack');
+const path = require('path');
 const merge = require('webpack-merge');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -8,8 +9,20 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const common = require('./webpack.common.js');
 
+const OUT_DIR = path.resolve(__dirname, '../dist');
+
 module.exports = merge(common, {
   mode: 'production',
+
+  output: {
+    path: OUT_DIR,
+    filename: 'js/[name].js',
+    publicPath: 'https://massivelines.github.io/role-based-admin/',
+    publicPath: '/role-based-admin/',
+    // Temp fix: Issue with webpack 4, might not be fix until 5, workaround for hot reloading
+    // https://github.com/webpack/webpack/issues/6642
+    // globalObject: 'this',
+  },
 
   optimization: {
     minimizer: [
@@ -62,6 +75,15 @@ module.exports = merge(common, {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(jpg|svg|ico|gif|png)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]',
+          publicPath: '/role-based-admin/',
+          // useRelativePath: true,
+        },
       },
     ],
   },

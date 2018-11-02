@@ -4,7 +4,8 @@ import * as ReactDOM from "react-dom";
 import '../scss/main.scss'
 
 import {
-    BrowserRouter as Router,
+    // BrowserRouter as Router,
+    HashRouter,
     Route,
     Switch,
     Redirect,
@@ -29,7 +30,9 @@ const mockClient = new ApolloClient({
 
 ReactDOM.render(
   <ApolloProvider client={mockClient}>
-    <Router basename={process.env.PUBLIC_URL}>
+    <HashRouter
+    // basename={process.env.PUBLIC_URL+ 'role-based-admin/'}
+    >
       <React.Fragment>
         <Header />
         <Switch>
@@ -49,7 +52,7 @@ ReactDOM.render(
           <Redirect from="/index" exact to="/users" />
         </Switch>
       </React.Fragment>
-    </Router>
+    </HashRouter>
   </ApolloProvider>,
   document.getElementById('root'),
 );

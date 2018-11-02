@@ -4,7 +4,7 @@
   "main": "index",
   "license": "UNLICENSED",
   "private": true,
-  "homepage": "https://massivelines.github.io/role-based-admin",
+  "homepage": "https://massivelines.github.io/role-based-admin/",
   "scripts": {
     "build": "webpack --config config/webpack.prod.js",
     "clean": "rimraf dist",

@@ -22,15 +22,17 @@ module.exports = {
   //   path.resolve(SRC_DIR, 'scss', 'main.scss'),
   // ],
 
-  output: {
-    path: OUT_DIR,
-    filename: 'js/[name].js',
-    // filename: 'bundle.js',
-    publicPath: '/',
-    // Temp fix: Issue with webpack 4, might not be fix until 5, workaround for hot reloading
-    // https://github.com/webpack/webpack/issues/6642
-    globalObject: 'this',
-  },
+  // output: {
+  //   path: OUT_DIR,
+  //   filename: 'js/[name].js',
+  //   // filename: 'bundle.js',
+  //   publicPath: '/',
+  //   // publicPath: 'https://massivelines.github.io/role-based-admin/',
+  //   // publicPath: '/role-based-admin/',
+  //   // Temp fix: Issue with webpack 4, might not be fix until 5, workaround for hot reloading
+  //   // https://github.com/webpack/webpack/issues/6642
+  //   // globalObject: 'this',
+  // },
 
   resolve: {
     modules: [SRC_DIR, 'node_modules'],
@@ -52,10 +54,19 @@ module.exports = {
         loader: 'babel-loader',
       },
 
-      {
-        test: /\.(jpg|svg|ico|gif|png)$/,
-        use: 'file-loader?name=[path][name].[ext]',
-      },
+      // {
+      //   test: /\.(jpg|svg|ico|gif|png)$/,
+      //   loader: 'file-loader',
+      //   options: {
+      //     name: '[path][name].[ext]',
+      //     publicPath: '/role-based-admin/',
+      //     useRelativePath: true,
+      //   },
+      // },
+      // {
+      //   test: /\.(jpg|svg|ico|gif|png)$/,
+      //   use: 'file-loader?name=[path][name].[ext]',
+      // },
     ],
   },
 
@@ -70,6 +81,6 @@ module.exports = {
       filename: './index.html',
     }),
     new WebpackBar(),
-    // new CopyWebpackPlugin([{ from: 'assets', to: 'assets' }]),
+    new CopyWebpackPlugin([{ from: 'assets', to: 'assets' }]),
   ],
 };
